@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 관련 퀴즈</title>
+    <style>
+        :root {
+            --theme-color: #233a6c;
+            --bg-light: #FFF5E6;
+            --text-dark: #333;
+            --text-light: white;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background: var(--theme-color);
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            color: var(--theme-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .container p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+
+        }
+
+        .back-button:hover {
+            background: #e65c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+            margin-top: 2rem;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 15px 0;
+            background-color: #f5cd1e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #08237a;
+        }
+
+        .result {
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>경영경제 관련 퀴즈</h1>
+</header>
+
+<div class="container">
+    <h2>경경 퀴즈에 도전하세요!</h2>
+
+    <form id="quiz-form">
+        <div class="quiz-question">
+            <p>1. SWOT 의 약자중 포함되지 않는것은?</p>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="parasite"> Strength
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="snowpiercer"> Weakness
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="oldboy"> opportunity
+            </label>
+            <label class="quiz-option">
+                <input type="radio" name="q1" value="oldboy"> Timing
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>2. EBITDA 는 뭐의 약자일까요?</p>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="dicaprio"> Earnings Before Interest, Taxes, Depreciation, and Amortization
+            </label><br>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="hemsworth"> Earnings Beyond Interest, Taxes, Depreciation, and Amortization
+            </label><br>
+            <label class="quiz-option">
+                <input type="radio" name="q2" value="pitt"> Earnings Before Interest, Terminal, Depreciation, and Amortization
+            </label>
+        </div>
+
+        <div class="quiz-question">
+            <p>3. 재화란?</p>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="christopher_nolan"> 사람들의 욕구를 충족시키기 위해 생산, 소비되는 물건
+            </label><br>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="quentin_tarantino"> 의사결정자가 어떤 행동을 했을 때 얻는 주관적인 만족감
+            </label> <br>
+            <label class="quiz-option">
+                <input type="radio" name="q3" value="steven_spielberg"> 재임스 화이트 ㅋ
+            </label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">제출하기</button> <br>
+        <a href="index.html" class="back-button">메인 페이지로 돌아가기</a>
+    </form>
+
+    <div class="result" id="quiz-result"></div>
+</div>
+
+
+<footer>
+    &copy; 2024 한동대학교. All Rights Reserved.
+</footer>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "oldboy",
+            q2: "dicaprio",
+            q3: "christopher_nolan"
+        };
+
+        let score = 0;
+        const form = document.forms["quiz-form"];
+        for (const question in answers) {
+            const selectedOption = form.querySelector(`input[name=${question}]:checked`);
+            if (selectedOption && selectedOption.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const resultDiv = document.getElementById("quiz-result");
+        resultDiv.textContent = `결과: ${score} / 3`;
+    }
+</script>
+
+</body>
+</html>

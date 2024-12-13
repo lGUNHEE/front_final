@@ -1,0 +1,213 @@
+
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한동대학교 학과 소개</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+        text-align: center; 
+        font-family: 'Arial', sans-serif; 
+        font-size: 2.5rem; 
+        margin: 20px 0; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        letter-spacing: 1px; 
+        font-weight: bold; 
+    }
+        header {
+            background-color: #1d4eb8;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            background-color: #ffc107; /* 노란색 */
+color: #1d4eb8;
+        }
+
+        nav ul li a:hover {
+            background-color: #1a409d;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(to right, #1d4eb8, #4a90e2);
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+        .grid-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+        .grid-item h2 {
+        font-size: 1.8rem;
+        color: #1d4eb8;
+        margin-bottom: 10px;
+    }
+
+    .grid-item p, .grid-item ul {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .grid-item ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .grid-item ul li {
+        margin: 8px 0;
+        padding-left: 15px;
+        position: relative;
+    }
+
+    .grid-item ul li::before {
+        content: "•";
+        color: #1d4eb8;
+        font-weight: bold;
+        margin-right: 8px;
+        position: absolute;
+        left: 0;
+    }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1d4eb8;
+            color: white;
+        }
+
+        #mbti-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #1d4eb8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #mbti-btn:hover {
+            background-color: #163b8c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/images/handonglogo.png" alt="학교 로고">
+        <h1>한동대학교 프론트엔드입문</h1>
+        <nav>
+            <ul>
+                <li><a href="TEAM.html">MBTI 퀴즈</a></li>
+                <li><a href="main_about.html">학부 소개</a></li>
+                <li><a href="main_developer.html">개발자</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>MBTI 테스트 해보기!</h2>
+        <p>나와 맞는 학과를 찾아보세요</p>
+        <button id="mbti-btn">테스트 시작하기</button>
+    </div>
+
+    <main>
+        <section id="about" class="grid-item">
+            <h2>저희는 누구일까요?</h2>
+            <p>저희는 평균나이 26세로 이제 막 졸업을 앞둔 학생 "노인정" 입니다. 조금 있으면 학교를 떠나 시원 섭섭 하지만 그럼에도 재밌는 프로젝트 할 수 있어서 기쁩니다. </p>
+        </section>
+
+        <section id="courses" class="grid-item">
+            <h2>메인 컨텐츠</h2>
+            <ul>
+                <li>MBTI로 알아보는 학부!</li>
+                <li>학부 소개</li>
+                <li>학부 테스트!</li>
+                
+            </ul>
+        </section>
+
+        <section id="purpose" class="grid-item">
+            <h2>제작 의도</h2>
+            <p>저희 프로젝트는 학과 선택을 고민하는 새내기들에게 도움을 주기 위해 제작되었습니다. 정확하고 실질적인 정보를 제공하여 학과 선택에 대한 고민을 해결할 수 있는 가이드를 제공합니다.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 한동대학교. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+   
+
+        document.getElementById('mbti-btn').addEventListener('click', function() {
+        window.location.href = "TEAM.html";
+    });
+
+    </script>
+</body>
+</html>

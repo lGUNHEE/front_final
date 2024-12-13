@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한동대학교 커뮤니케이션학부</title>
+    <style>
+        :root {
+            --theme-color: #233a6c;
+            --bg-light: #FFF5E6;
+            --text-dark: #333;
+            --text-light: white;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .menu-bar {
+            background: var(--theme-color);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        .menu-bar a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .menu-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: var(--theme-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: auto; /
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem; 
+        }
+
+        .button:hover {
+            background: #e65c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+        }
+        .sidebar {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>한동대학교 경영경제학부</h1>
+</header>
+
+<div class="menu-bar">
+    <a href="컴케소개페이지-학부 개요.html">학부 개요</a>
+    <a href="컴케소개페이지-학습내용.html">학습 내용</a>
+    <a href="컴케소개페이지-학부 비전.html">학부 비전</a>
+    <a href="컴케소개페이지-추천 이유.html">추천 이유</a>
+    <a href="컴케소개페이지-졸업후진로.html">졸업 후 진로</a>
+    <a href="컴케소개페이지-입학 정보.html">입학 정보</a>
+    <a href="컴케소개페이지-퀴즈.html">퀴즈</a>
+</div>
+
+<div class="container">
+    <div class="card" id="overview">
+        <h3>학부 개요</h3>
+        <p>
+            한동대학교 경영경제학부는 창의적이고 윤리적인 글로벌 리더를 양성하기 위해 설립된 학부로, 경영학과 경제학을 융합한 통합적 교육 과정을 제공합니다. </p>
+        <a href="컴케소개페이지-학부 개요.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="learning">
+        <h3>학습 내용</h3>
+        <p>- 마케팅<br>
+           - 인사관리<br>
+           - 재무회계<br>
+            - 거시, 미시 경제 등</p>
+        <a href="컴케소개페이지-학습내용.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="vision">
+        <h3>학부 비전</h3>
+        <p>한동대학교 경영경제학부는 경영 경제 영역에서 하나님 나라의 회복을 위한 청지기를 양성합니다</p>
+        <a href="컴케소개페이지-학부 비전.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="why">
+        <h3>추천 이유</h3>
+        <p>- 기독교적 가치에 기반한 교육<br>
+           - 이론과 실무의 균형 잡힌 커리큘럼<br>
+           - 하나님의 가치로 돈을 접할 수 있는 곳</p>
+        <a href="컴케소개페이지-추천 이유.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="career">
+        <h3>졸업 후 진로</h3>
+        <p>마케팅, 회계, 인사, 등 기업 운영의 필수 업무 관련 직업 및 경제 관련 다양한 회사 지원</p>
+        <a href="컴케소개페이지-졸업후진로.html" class="button">자세히 보기</a>
+    </div>
+   
+    <div class="card" id="overview">
+        <h3>컴퀴즈</h3>
+        <p>컴케로 오고 싶은자! 퀴즈를 풀어라!</p>
+        <a href="컴케소개페이지-퀴즈.html" class="button">자세히 보기</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 한동대학교. All Rights Reserved.
+</footer>
+
+</body>
+</html>

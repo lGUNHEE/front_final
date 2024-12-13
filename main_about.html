@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학부 소개</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+        }
+
+        header {
+            background-color: #1d4eb8;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px; 
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 250px; 
+            text-align: center;
+            animation: fadeIn 0.5s ease-in;
+            flex: 1 1 180px; 
+        }
+
+        h2 {
+            color: #1d4eb8;
+            font-size: 1.2em; 
+        }
+
+        .image-container {
+            margin-top: 10px;
+        }
+
+        .department-image {
+            width: 100%;
+            border-radius: 10px;
+            max-width: 150px; 
+            transition: transform 0.3s;
+        }
+
+        .department-image:hover {
+            transform: scale(1.05);
+        }
+
+        .button-container {
+            margin-top: 10px; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1d4eb8;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>학부 소개</h1>
+        <nav>
+            <ul>
+                <li><a href="main_index.html">홈</a></li>
+                <li><a href="TEAM.html">MBTI 퀴즈</a></li>
+                <li><a href="main_developer.html">개발자</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>공간환경시스템공학부</h2>
+            <p>이웃을 위한 공간 환경 설계.</p>
+            <div class="image-container">
+                <img src="./images/gong1.png" alt="학부 이미지" class="department-image">
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='공간환경시스템공학부/gong_index.html'">더보기</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>전산전자공학부</h2>
+            <p>하나님의 마음, 미래기술의 심장.</p>
+            <div class="image-container">
+                <img src="./images/jeon1.png" alt="학부 이미지" class="department-image">
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='전산전자공학부/introduction.html'">더보기</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>경영경제학부</h2>
+            <p>도전하라 지금, 하나님의 방법으로.</p>
+            <div class="image-container">
+                <img src="./images/gyung1.png" alt="학부 이미지" class="department-image">
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='경영경제학부/경index.html'">더보기</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>법학부</h2>
+            <p>정의를 하수같이 공법을 물같이.</p>
+            <div class="image-container">
+                <img src="./images/bob1.png" alt="학부 이미지" class="department-image">
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='법학부/bob_index.html'">더보기</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>커뮤니케이션학부</h2>
+            <p>맑은 컨텐츠로 세상을 바꾼다.</p>
+            <div class="image-container">
+                <img src="./images/comm1.png" alt="학부 이미지" class="department-image">
+            </div>
+            <div class="button-container">
+                <button onclick="location.href='커뮤니케이션학부/comm_index.html'">더보기</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 프론트엔드입문 : 노인정</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                sec.classList.add('fade-in');
+            });
+        };
+    </script>
+</body>
+</html>

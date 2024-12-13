@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전전이다.</title>
+    <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+</head>
+<body class="light">
+    <header>
+        <h1 style="color : Red">CSEE</h1>
+        <h1><span style="color : Red">C</span style="color : Red">omputer <span style="color : Red">S</span>cience and <span style="color : Red">E</span>lectrical <span style="color : Red">E</span>ngineering</h1>
+        <p style="font-style: italic; font-size: larger;" >"미래를 선도하는 첨단 기술 분야"</p>
+
+
+
+        <div class="theme-switch-wrapper" style="margin-left: 50px; margin-bottom: 30px;">
+            <i class="fas fa-lightbulb"></i>
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+            <i class="far fa-moon"></i>
+        </div>
+
+        <div class="title_image">
+            <img  src="csee.jpg" alt="none">
+            <img src = "csee2.jpg"  alt="none">
+        </div>
+
+        
+
+    </header>
+
+    
+
+    <body class="light">
+        <button class="open-sidebar-btn" onclick="openSidebar()">☰ 빠른이동</button>
+    
+        <div class="overlay" id="overlay"></div>
+        <aside class="sidebar" id="sidebar">
+            <button class="close-sidebar-btn" onclick="closeSidebar()">&times;</button>
+            <nav>
+                
+                    <a href="../main_index.html">홈</a>
+                    <hr style="margin:20px 10px">
+                    <a href="../커뮤니케이션학부/comm_index.html">커뮤니케이션학부</a>
+                    <hr style="margin:20px 10px">
+                    <a href="../법학부/bob_index.html">법학부</a>
+                    <hr style="margin:20px 10px">
+                    <a href="../공간환경시스템공학부/gong_index.html">공간환경시스템공학부</a>
+                    <hr style="margin:20px 10px">
+                    <a href="../경영경제학부/경index.html">경영경제학부</a>
+                    <hr style="margin:20px 10px">
+                
+            </nav>
+        </aside>
+
+
+    
+    <hr style="margin:150px;">
+    <main>
+        <section style="margin-bottom: 50px;">
+            <h2>전산전자공학부란?</h2>
+            <p>컴퓨터를 구성하는 하드웨어와 소프트웨어를 설계, 개발, 그리고 분석하는 학문입니다.</p>
+            <p>전반적인 회로의 동작원리와 회로를 다양한 방식으로 응용하는 법을 배우며,</p>
+            <p>소프트웨어 개발, 데이터 과학, 네트워킹 시스템과 같은 다양한 분야를 포함합니다.</p>
+        </section>
+        
+    </main>
+    <button id="topBtn" class="top-btn" onclick="scrollToTop()">▲ GO TO TOP</button>
+
+
+    <div class="carousel-container">
+        <button class="carousel-button left" onclick="slideLeft()">&#9664;</button> <!-- 왼쪽 화살표 버튼 -->
+        <div class="carousel-content">
+            <div class="item">
+                <h2>학부개요</h2>
+                <p>전산전자공학부는 컴퓨터 과학(Computer Science)과 전자공학(Electrical Engineering)을 융합한 학문 분야로,
+                    현대 사회의 첨단 기술을 주도하는 핵심적인 역할을 담당합니다.
+                    이 학부는 하드웨어와 소프트웨어, 이론과 실무를 아우르는 통합적인 교육을 통해 창의적이고 
+                    실무적인 엔지니어를 양성하는 데 중점을 둡니다.</p>
+            
+            </div>
+
+            <div class="item">
+                <h2>학습내용</h2>
+                <P>전산전자공학부의 학습 과정은 이론과 실습의 균형을 유지하며, 최신 기술 트렌드를 반영한 문제 해결 중심 학습을 제공한다.
+                     강의실 수업과 실습실에서의 프로젝트 중심 학습을 통해 학생들은 현업에 바로 적용 가능한 실무 역량을 쌓는다. 
+                    또한, 복잡한 공학적 문제를 창의적으로 해결할 수 있는 사고력을 배양하며, 전산, 전자, 통신, 제어 등 다양한 분야의 융합적 접근을 통해 종합적인 공학 지식을 습득할 수 있다.</P>
+            </div>
+
+            <div class="item">
+                <h2>학부비전</h2>
+                <p>전산전자공학부는 디지털 혁신의 중심에서 미래 기술을 선도하고, 글로벌 사회에 기여할 창의적이고 융합적인 인재를 양성하는 것을 
+                    비전으로 삼고 있습니다. 이를 위해 교육, 연구, 산학협력의 세 가지 축을 통해 학문적 깊이와 실무적 역량을 겸비한 리더를 배출하는 
+                    것을 목표로 합니다.</p>
+            </div>
+
+            <div class="item">
+                <h2>입학정보</h2>
+                <p>한동대학교 전산전자공학부는 한동대학교 학생이라면 누구든지 올 수 있습니다! 
+                    자세한 입학 안내는 <a href="https://www.handong.edu" target="_blank">공식 웹사이트</a>에서 확인하세요.</p>
+            </div>
+
+        </div>
+        <button class="carousel-button right" onclick="slideRight()">&#9654;</button> <!-- 오른쪽 화살표 버튼 -->
+    </div>
+
+    
+    <footer>
+        <p> &copy 전산전자공학부 소개</p>
+        <p>Designed by LEE KEONHEE,Department of CSEE</p>
+    </footer>
+    <script src="instroduction.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

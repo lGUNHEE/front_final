@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한동대학교 법학부</title>
+    <style>
+        :root {
+            --theme-color: #FAF7CC; 
+            --bg-light: #FFF5E6;
+            --text-dark: #333;
+            --text-light: black;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .menu-bar {
+            background: var(--theme-color);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        .menu-bar a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .menu-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 요소 간 공간 배분 */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: var(--theme-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: auto; /* 공간을 최대로 벌림 */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem; 
+        }
+
+        .button:hover {
+            background: #e65c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+        }
+        .sidebar {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>한동대학교 법학부</h1>
+</header>
+
+<div class="menu-bar">
+    <a href="bob_학부 개요.html">학부 개요</a>
+    <a href="bob_학습내용.html">학습 내용</a>
+    <a href="bob_학부 비전.html">학부 비전</a>
+    <a href="bob_추천 이유.html">추천 이유</a>
+    <a href="bob_졸업후진로.html">졸업 후 진로</a>
+    <a href="bob_입학 정보.html">입학 정보</a>
+    <a href="bob_퀴즈.html">퀴즈</a>
+</div>
+
+<div class="container">
+    <div class="card" id="overview">
+        <h3>학부 개요</h3>
+        <p>한동대학교 법학부, 밥을 굶을지라도 영혼은 굶지 않는 최고의 학문을 배우는 곳,<br> 
+           로스쿨 또는 공무원시험으로 진로가 나뉘어 갈 길이 밝히 보이는 전공,<br>
+           태동부터 여호와를 경외하는 지식의 근본 위에 세워진 학문.</p>
+        <a href="bob_학부 개요.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="learning">
+        <h3>학습 내용</h3>
+        <p>- 헌법, 형법, 민법(총칙, 물권, 채권)의 법학의 기본법<br>
+           - 형사소송법, 민사소송법, 노동법, 행정법, 행정학, 경찰학 등의 법과 학문<br>
+           - 기독교법사상, 법철학 등의 실용주의를 넘어서는 근본 철학</p>
+        <a href="bob_학습내용.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="vision">
+        <h3>학부 비전</h3>
+        <p>법이 있어도 무질서하고 학문도 사회의 길잡이가 되지 못하는 현대의 사회에서 한 알의 밀알과 같이 하나님의 사랑을 담은 정의의 열매를 맺는 인재를 양성하고자 한다.</p>
+        <a href="bob_학부 비전.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="why">
+        <h3>추천 이유</h3>
+        <p>- 성경적 가치관과 부딪히는 과정을 살펴보며 기독교적 법조인이 어떻게 될 수 있을지 고민 가능 <br>
+           - 실용주의화 된 타 대학의 법학과 다르게 법학에 관한 다양한 관점을 배울 수 있음<br>(철저한 성경적 세계관으로 분별 필요)<br>
+        </p>
+        <a href="bob_추천 이유.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="career">
+        <h3>졸업 후 진로</h3>
+        <p>판사, 검사, 변호사, 국가/지방직 공무원, 행정고시, 입법고시, 국회 등 대부분의 공직</p>
+        <a href="bob_졸업후진로.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="admission">
+        <h3>입학 정보</h3>
+        <p>한동대학교 법학부는 한동대학교 학생이라면 누구든지 올 수 있습니다! 
+           자세한 입학 안내는 <a href="https://www.handong.edu" target="_blank">공식 웹사이트</a>에서 확인하세요.</p>
+        <a href="bob_입학 정보.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="overview">
+        <h3>법퀴즈</h3>
+        <p>법을 공부하려는 자! 퀴즈를 풀어라!</p>
+        <a href="bob_퀴즈.html" class="button">자세히 보기</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 한동대학교. All Rights Reserved.
+</footer>
+
+</body>
+</html>

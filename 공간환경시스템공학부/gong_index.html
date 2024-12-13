@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한동대학교 공간환경시스템공학부</title>
+    <style>
+        :root {
+            --theme-color: #00AD38;
+            --bg-light: #FFF5E6;
+            --text-dark: #333;
+            --text-light: white;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .menu-bar {
+            background: var(--theme-color);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        .menu-bar a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .menu-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 요소 간 공간 배분 */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: var(--theme-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: auto; /* 공간을 최대로 벌림 */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1rem; /* 버튼과 콘텐츠 사이 간격 */
+        }
+
+        .button:hover {
+            background: #02922f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: var(--theme-color);
+            color: var(--text-light);
+        }
+        .sidebar {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>공간환경시스템공학부</h1>
+</header>
+
+<div class="menu-bar">
+    <a href="gong_학부 개요.html">학부 개요</a>
+    <a href="gong_학습내용.html">학습 내용</a>
+    <a href="gong_학부 비전.html">학부 비전</a>
+    <a href="gong_추천 이유.html">추천 이유</a>
+    <a href="gong_졸업후진로.html">졸업 후 진로</a>
+    <a href="gong_입학 정보.html">입학 정보</a>
+    <a href="gong_퀴즈.html">퀴즈</a>
+</div>
+
+<div class="container">
+    <div class="card" id="overview">
+        <h3>학부 개요</h3>
+        <p>한동대학교 공간환경시스템공학부는 공간영역(예: 도시, 건축, 토목 인프라 - 도로/철도, 하천/항만 등)에서 발생하는 공학 현상과 문제들을 시스템적 분석에 의해 해결하는 인재를 양성합니다.<br>
+
+           특히 환경친화적 관점에서 지속 가능한 공간개발을 추진하므로, 하나님의 창조 질서를 회복하는 기독전문인을 양성하는 것을 목표로 합니다.</p>
+        <a href="gong_학부 개요.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="learning">
+        <h3>학습 내용</h3>
+        <p>- 건축학, 토목학, 도시계획학, 환경공학 이론 및 실습<br>
+           - 비판적 사고와 창의적 문제 해결 능력 배양<br>
+           - 기업과 협력한 실무 프로젝트 및 인턴십</p>
+        <a href="gong_학습내용.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="vision">
+        <h3>학부 비전</h3>
+        <p>공간환경시스템공학부는 하나님이 창조하신 <br>
+            지구를 전공학문을 통하여 쾌적하고 지속 <br>
+            가능한 공간환경으로 개선함으로 인류와 <br>
+            사회에 기여하는 인재를 양성하는 것을 목표로 합니다.</p>
+        <a href="gong_학부 비전.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="why">
+        <h3>추천 이유</h3>
+        <p>- 기독교적 가치에 기반한 교육<br>
+           - 이론과 실무의 균형 잡힌 커리큘럼<br>
+           - 글로벌 네트워크와 다양한 진로 선택 가능성</p>
+        <a href="gong_추천 이유.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="career">
+        <h3>졸업 후 진로</h3>
+        <p>건축가, 도시설계전문가, 건축공학자, 도시계획가, 국제개발전문가, 주택 및 부동산 전문가,  교통공학자, 환경공학자, 수공학자(하천,항망), 지반공학자, 구조공학자, 시공 전문가 등이 있습니다.</p>
+        <a href="gong_졸업후진로.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="admission">
+        <h3>입학 정보</h3>
+        <p>한동대학교 공간환경시스템공학부는 여러분 모두를 환영합니다. 
+           자세한 입학 안내는 <a href="https://admissions.handong.edu/" target="_blank">공식 웹사이트</a>에서 확인하세요.</p>
+        <a href="gong_입학 정보.html" class="button">자세히 보기</a>
+    </div>
+    <div class="card" id="overview">
+        <h3>공퀴즈?</h3>
+        <p>공시로 오고 싶은자! 퀴즈를 풀어라!</p>
+        <a href="gong_퀴즈.html" class="button">자세히 보기</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 한동대학교. All Rights Reserved.
+</footer>
+
+</body>
+</html>
